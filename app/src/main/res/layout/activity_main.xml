@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorFondo">
+
+    <TextView
+        android:id="@+id/TXVTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/appTitle"
+        android:textSize="@dimen/textSizeTitle"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:layout_marginTop="@dimen/marginTop"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+    <GridLayout
+        android:id="@+id/GRLTablero"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/marginTop"
+        android:columnCount="4"
+        android:rowCount="4"
+        android:alignmentMode="alignMargins"
+        app:layout_constraintTop_toBottomOf="@id/TXVTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        >
+
+        <Button android:id="@+id/btnCasilla0" android:layout_width="75dp" android:layout_height="75dp" android:layout_margin="3dp" android:textSize="22sp" android:textStyle="bold" android:textColor="@color/black" android:backgroundTint="@color/colorBoton" android:text="1" android:layout_row="0" android:layout_column="0" />
+        <Button android:id="@+id/btnCasilla1" android:layout_width="75dp" android:layout_height="75dp" android:layout_margin="3dp" android:textSize="22sp" android:textStyle="bold" android:textColor="@color/black" android:backgroundTint="@color/colorBoton" android:text="2" android:layout_row="0" android:layout_column="1" />
+        <Button android:id="@+id/btnCasilla2" android:layout_width="75dp" android:layout_height="75dp" android:layout_margin="3dp" android:textSize="22sp" android:textStyle="bold" android:textColor="@color/black" android:backgroundTint="@color/colorBoton" android:text="3" android:layout_row="0" android:layout_column="2" />
+        <Button android:id="@+id/btnCasilla3" android:layout_width="75dp" android:layout_height="75dp" android:layout_margin="3dp" android:textSize="22sp" android:textStyle="bold" android:textColor="@color/black" android:backgroundTint="@color/colorBoton" android:text="4" android:layout_row="0" android:layout_column="3" />
+
+        <Button android:id="@+id/btnCasilla4" android:layout_width="75dp" android:layout_height="75dp" android:layout_margin="3dp" android:textSize="22sp" android:textStyle="bold" android:textColor="@color/black" android:backgroundTint="@color/colorBoton" android:text="5" android:layout_row="1" android:layout_column="0" />
+        <Button android:id="@+id/btnCasilla5" android:layout_width="75dp" android:layout_height="75dp" android:layout_margin="3dp" android:textSize="22sp" android:textStyle="bold" android:textColor="@color/black" android:backgroundTint="@color/colorBoton" android:text="6" android:layout_row="1" android:layout_column="1" />
+        <Button android:id="@+id/btnCasilla6" android:layout_width="75dp" android:layout_height="75dp" android:layout_margin="3dp" android:textSize="22sp" android:textStyle="bold" android:textColor="@color/black" android:backgroundTint="@color/colorBoton" android:text="7" android:layout_row="1" android:layout_column="2" />
+        <Button android:id="@+id/btnCasilla7" android:layout_width="75dp" android:layout_height="75dp" android:layout_margin="3dp" android:textSize="22sp" android:textStyle="bold" android:textColor="@color/black" android:backgroundTint="@color/colorBoton" android:text="8" android:layout_row="1" android:layout_column="3" />
+
+        <Button android:id="@+id/btnCasilla8" android:layout_width="75dp" android:layout_height="75dp" android:layout_margin="3dp" android:textSize="22sp" android:textStyle="bold" android:textColor="@color/black" android:backgroundTint="@color/colorBoton" android:text="9" android:layout_row="2" android:layout_column="0" />
+        <Button android:id="@+id/btnCasilla9" android:layout_width="75dp" android:layout_height="75dp" android:layout_margin="3dp" android:textSize="22sp" android:textStyle="bold" android:textColor="@color/black" android:backgroundTint="@color/colorBoton" android:text="10" android:layout_row="2" android:layout_column="1" />
+        <Button android:id="@+id/btnCasilla10" android:layout_width="75dp" android:layout_height="75dp" android:layout_margin="3dp" android:textSize="22sp" android:textStyle="bold" android:textColor="@color/black" android:backgroundTint="@color/colorBoton" android:text="11" android:layout_row="2" android:layout_column="2" />
+        <Button android:id="@+id/btnCasilla11" android:layout_width="75dp" android:layout_height="75dp" android:layout_margin="3dp" android:textSize="22sp" android:textStyle="bold" android:textColor="@color/black" android:backgroundTint="@color/colorBoton" android:text="12" android:layout_row="2" android:layout_column="3" />
+
+        <Button android:id="@+id/btnCasilla12" android:layout_width="75dp" android:layout_height="75dp" android:layout_margin="3dp" android:textSize="22sp" android:textStyle="bold" android:textColor="@color/black" android:backgroundTint="@color/colorBoton" android:text="13" android:layout_row="3" android:layout_column="0" />
+        <Button android:id="@+id/btnCasilla13" android:layout_width="75dp" android:layout_height="75dp" android:layout_margin="3dp" android:textSize="22sp" android:textStyle="bold" android:textColor="@color/black" android:backgroundTint="@color/colorBoton" android:text="14" android:layout_row="3" android:layout_column="1" />
+        <Button android:id="@+id/btnCasilla14" android:layout_width="75dp" android:layout_height="75dp" android:layout_margin="3dp" android:textSize="22sp" android:textStyle="bold" android:textColor="@color/black" android:backgroundTint="@color/colorBoton" android:text="15" android:layout_row="3" android:layout_column="2" />
+        <Button android:id="@+id/btnCasilla15" android:layout_width="75dp" android:layout_height="75dp" android:layout_margin="3dp" android:textSize="22sp" android:textStyle="bold" android:textColor="@color/black" android:backgroundTint="@color/colorBoton" android:text="" android:layout_row="3" android:layout_column="3" />
+
+    </GridLayout>
+
+    <TextView
+        android:id="@+id/TXVMensaje"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/mensaje"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:layout_marginTop="@dimen/marginTop"
+        app:layout_constraintTop_toBottomOf="@id/GRLTablero"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+    <Button
+        android:id="@+id/btnReiniciar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="@string/reiniciarJuego"
+        android:textColor="@color/black"
+        android:backgroundTint="@color/colorBoton"
+        app:layout_constraintTop_toBottomOf="@id/TXVMensaje"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+    <Button
+        android:id="@+id/btnDesordenar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="@string/desordenar"
+        android:textColor="@color/black"
+        android:backgroundTint="@color/colorBoton"
+        app:layout_constraintTop_toBottomOf="@id/btnReiniciar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+    <Button
+        android:id="@+id/btnVerificar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="@string/verificar"
+        android:textColor="@color/black"
+        android:backgroundTint="@color/colorBoton"
+        app:layout_constraintTop_toBottomOf="@id/btnDesordenar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
