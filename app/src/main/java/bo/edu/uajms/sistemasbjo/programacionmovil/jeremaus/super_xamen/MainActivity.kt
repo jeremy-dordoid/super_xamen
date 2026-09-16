@@ -16,13 +16,11 @@ class MainActivity : ComponentActivity() {
     private lateinit var btnDesordenar: Button
     private lateinit var btnVerificar: Button
 
-    // matriz que guarda en todo momento lo que hay en cada casilla ("1".."15" o "" para el hueco)
     private val tablero = Array(filas) { Array(columnas) { "" } }
 
     private var filaVacia = 0
     private var columnaVacia = 0
 
-    // guarda "1", "2", ..., "15", "" en el orden inicial, para poder reiniciar
     private lateinit var valoresIniciales: Array<String>
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -42,7 +40,6 @@ class MainActivity : ComponentActivity() {
         btnDesordenar = findViewById(R.id.btnDesordenar)
         btnVerificar = findViewById(R.id.btnVerificar)
 
-        // copiamos lo que se ve en los botones a la matriz, para que arranque sincronizada
         for (fila in 0 until filas) {
             for (columna in 0 until columnas) {
                 val texto = botones[fila * columnas + columna].text.toString()
@@ -54,7 +51,6 @@ class MainActivity : ComponentActivity() {
             }
         }
 
-        // guardamos el orden inicial (1..15 y "") para poder volver a él con Reiniciar
         valoresIniciales = Array(16) { i -> botones[i].text.toString() }
 
         for (i in botones.indices) {
@@ -71,7 +67,6 @@ class MainActivity : ComponentActivity() {
     }
 
     private fun click(fila: Int, columna: Int) {
-        // revisamos si el hueco está arriba, abajo, izquierda o derecha de la casilla tocada
         val esVecino =
             (fila - 1 == filaVacia && columna == columnaVacia) ||
             (fila + 1 == filaVacia && columna == columnaVacia) ||
@@ -83,20 +78,16 @@ class MainActivity : ComponentActivity() {
         val botonTocado = botones[fila * columnas + columna]
         val botonVacio = botones[filaVacia * columnas + columnaVacia]
 
-        // intercambiamos el texto de los botones
         botonVacio.text = botonTocado.text
         botonTocado.text = ""
 
-        // el mismo intercambio, pero en la matriz
         tablero[filaVacia][columnaVacia] = tablero[fila][columna]
         tablero[fila][columna] = ""
 
-        // ahora el hueco quedó donde estaba la casilla tocada
         filaVacia = fila
         columnaVacia = columna
     }
 
-    // pone los botones y la matriz de vuelta en el orden inicial (1..15 y el hueco al final)
     private fun reiniciar() {
         for (i in botones.indices) {
             botones[i].text = valoresIniciales[i]
@@ -109,7 +100,6 @@ class MainActivity : ComponentActivity() {
         txvMensaje.text = getString(R.string.msgReiniciado)
     }
 
-    // reparte los mismos 16 valores en un orden aleatorio
     private fun desordenar() {
         val valoresMezclados = valoresIniciales.toList().shuffled()
         for (i in botones.indices) {
@@ -123,7 +113,6 @@ class MainActivity : ComponentActivity() {
         txvMensaje.text = getString(R.string.msgDesordenado)
     }
 
-    // revisa si el tablero quedó en el mismo orden que al inicio (1..15 y el hueco al final)
     private fun verificar() {
         var ordenado = true
         for (i in botones.indices) {
