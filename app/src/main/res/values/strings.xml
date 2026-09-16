@@ -5,4 +5,8 @@
     <string name="reiniciarJuego">Reiniciar Juego</string>
     <string name="desordenar">Desordenar</string>
     <string name="verificar">Verificar</string>
+    <string name="msgReiniciado">Juego Reiniciado</string>
+    <string name="msgDesordenado">Completado</string>
+    <string name="msgOrdenado">Juego Ordenado</string>
+    <string name="msgNoOrdenado">Juego Desordenado</string>
 </resources>
